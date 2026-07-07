@@ -86,7 +86,10 @@ const WhyUs = () => {
     },
   ];
   return (
-    <section className="bg-gradient-to-t from-black/10 via-white/90 to-white/100 w-full px-20 pb-5 z-20">
+    <section
+      className="bg-gradient-to-t from-black/10 via-white/90 to-white/100 w-full px-20 pb-5 z-20"
+      id="properties"
+    >
       <div className="flex flex-col justify-center text-center py-10">
         <div className="my-10 flex items-center justify-center gap-6">
           <Separator className="flex-1 bg-[#8B6B3E]" />

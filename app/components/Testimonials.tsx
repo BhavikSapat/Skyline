@@ -18,9 +18,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Link from "next/link";
 import { useRef } from "react";
 const Testimonials = () => {
-  const plugin = useRef(Autoplay({ delay: 4000, stopOnInteraction: false }));
+  const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: false }));
   const keys = [
     {
       name: "Talha Khan",
@@ -80,7 +81,10 @@ const Testimonials = () => {
     },
   ];
   return (
-    <section className="bg-gradient-to-t from-black/10 via-white/90 to-white/100 w-full px-20  py-10">
+    <section
+      className="bg-gradient-to-t from-black/10 via-white/90 to-white/100 w-full px-20  py-10"
+      id="testimonials"
+    >
       {/* <div className="flex flex-col justify-center text-center py-15">
         <div className="my-10 flex items-center justify-center gap-6">
           <Separator className="flex-1 bg-[#8B6B3E]" />
@@ -93,7 +97,7 @@ const Testimonials = () => {
           Simple, transparent, and guided at every step.
         </p>
       </div> */}
-      <div className="flex border border-[#8B6B3E] p-3 rounded-xl items-start justify-between px-20">
+      <div className="flex border border-[#8B6B3E] p-3 rounded-xl items-start justify-between px-40">
         <div className="max-w-[30vw]">
           <h1 className="whitespace-nowrap text-4xl font-bold text-[#8B6B3E] py-15">
             What Our Clients Say
@@ -102,10 +106,12 @@ const Testimonials = () => {
             Trusted by hundreds of families who found their perfect home with
             Skyline Realty.
           </p>
-          <div className="flex py-7 text-black/70 gap-3 items-center">
-            <p>View All Reviews from our Clients</p>
-            <ArrowUpRight className="h-5 w-5" />
-          </div>
+          <Link href="#testimonials">
+            <div className="flex py-7 text-black/70 gap-3 items-center hover:underline">
+              <p>View All Reviews from our Clients</p>
+              <ArrowUpRight className="h-5 w-5" />
+            </div>
+          </Link>
         </div>
         <div className="flex items-center justify-center">
           <Carousel
@@ -117,8 +123,8 @@ const Testimonials = () => {
             <CarouselContent>
               {keys.map((item, index) => (
                 <CarouselItem key={index}>
-                  <div className="p-1">
-                    <Card className="group h-auto rounded-3xl border bg-white shadow-sm transition-all duration-300 ">
+                  <div className="p-1 ">
+                    <Card className="group h-auto rounded-3xl border bg-white shadow-sm transition-all duration-300  ">
                       <CardContent className="flex h-full flex-col px-8 py-4">
                         <div className="mb-6 flex gap-1">
                           {Array.from({ length: 5 }).map((_, i) => (
