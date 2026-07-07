@@ -86,7 +86,7 @@ const WhyUs = () => {
     },
   ];
   return (
-    <section className="bg-[#F8F6F2] w-full px-20 pb-5">
+    <section className="bg-gradient-to-t from-black/10 via-white/90 to-white/100 w-full px-20 pb-5 z-20">
       <div className="flex flex-col justify-center text-center py-10">
         <div className="my-10 flex items-center justify-center gap-6">
           <Separator className="flex-1 bg-[#8B6B3E]" />
@@ -111,7 +111,7 @@ const WhyUs = () => {
                 className="basis-full md:basis-1/2 lg:basis-1/3 xl:basis-1/4"
               >
                 <div className="p-2">
-                  <Card className="overflow-hidden p-0 rounded-3xl border-0 shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                  <Card className="overflow-hidden p-0 rounded-3xl border-0 shadow-md transition-all duration-500 hover:-translate-y-2 ">
                     <div className="relative h-54 w-full">
                       <Image
                         src={item.img}

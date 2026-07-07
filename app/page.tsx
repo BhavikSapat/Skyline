@@ -6,6 +6,7 @@ import Hero from "./components/Hero";
 import WhyUs from "./components/WhyUs";
 import Property from "./components/Property";
 import Timeline from "./components/Timeline";
+import Testimonials from "./components/Testimonials";
 
 const Page = () => {
   return (
@@ -41,7 +42,7 @@ const Page = () => {
 
       <section className="relative min-h-screen overflow-hidden">
         {/* <Image
-          src="/properties-bg.jpg"
+          src="/banner2.webp"
           alt="Properties Background"
           fill
           className="object-cover -z-10"
@@ -49,7 +50,9 @@ const Page = () => {
 
         <div className="absolute inset-0 bg-black/40 -z-10" />
 
-        <Property />
+        <div className="z-20">
+          <Property />
+        </div>
       </section>
 
       <section className="relative min-h-screen overflow-hidden">
@@ -63,6 +66,18 @@ const Page = () => {
         <div className="absolute inset-0 bg-black/40 -z-10" />
 
         <Timeline />
+      </section>
+      <section className="relative min-h-screen overflow-hidden">
+        {/* <Image
+          src="/properties-bg.jpg"
+          alt="Properties Background"
+          fill
+          className="object-cover -z-10"
+        /> */}
+
+        {/* <div className="absolute inset-0 bg-black/40 -z-10" /> */}
+
+        <Testimonials />
       </section>
     </>
   );

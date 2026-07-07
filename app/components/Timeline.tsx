@@ -33,7 +33,7 @@ const Timeline = () => {
     },
   ];
   return (
-    <section className="bg-[#F8F6F2] w-full px-20  pb-10">
+    <section className="bg-[#F8F6F2] w-full px-20  py-18">
       <div className="flex flex-col justify-center text-center py-15">
         <div className="my-10 flex items-center justify-center gap-6">
           <Separator className="flex-1 bg-[#8B6B3E]" />
