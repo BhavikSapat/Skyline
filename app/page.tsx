@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import WhyUs from "./components/WhyUs";
 import Property from "./components/Property";
+import Timeline from "./components/Timeline";
 
 const Page = () => {
   return (
@@ -49,6 +50,19 @@ const Page = () => {
         <div className="absolute inset-0 bg-black/40 -z-10" />
 
         <Property />
+      </section>
+
+      <section className="relative min-h-screen overflow-hidden">
+        {/* <Image
+          src="/properties-bg.jpg"
+          alt="Properties Background"
+          fill
+          className="object-cover -z-10"
+        /> */}
+
+        <div className="absolute inset-0 bg-black/40 -z-10" />
+
+        <Timeline />
       </section>
     </>
   );

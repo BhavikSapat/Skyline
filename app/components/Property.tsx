@@ -86,7 +86,7 @@ const WhyUs = () => {
     },
   ];
   return (
-    <section className="bg-[#F8F6F2] w-full px-20 ">
+    <section className="bg-[#F8F6F2] w-full px-20 pb-5">
       <div className="flex flex-col justify-center text-center py-10">
         <div className="my-10 flex items-center justify-center gap-6">
           <Separator className="flex-1 bg-[#8B6B3E]" />
@@ -111,16 +111,16 @@ const WhyUs = () => {
                 className="basis-full md:basis-1/2 lg:basis-1/3 xl:basis-1/4"
               >
                 <div className="p-2">
-                  <Card className="overflow-hidden p-0 rounded-3xl border-0 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                  <Card className="overflow-hidden p-0 rounded-3xl border-0 shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
                     <div className="relative h-54 w-full">
                       <Image
                         src={item.img}
                         alt={item.title}
                         fill
-                        className="object-cover object-top"
+                        className="object-cover object-top hover:scale-125 duration-500"
                       />
 
-                      <div className="absolute right-4 top-4 rounded-full bg-white px-4 py-1 text-sm font-semibold text-[#8B6B3E] shadow-lg">
+                      <div className="absolute right-4 top-4 rounded-full  px-4 py-1 text-sm font-semibold text-white shadow-lg backdrop-blur-sm bg-white/10">
                         {item.price}
                       </div>
                     </div>
