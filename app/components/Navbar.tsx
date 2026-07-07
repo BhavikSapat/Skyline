@@ -5,28 +5,34 @@ export default function Navbar() {
   const tabs = ["Home", "Properties", "About", "Contact"];
   return (
     <>
-      <nav className="w-full border-b border-gray-200  bg-[#FAF8F4]">
-        <div className="mx-auto flex w-full items-center justify-between px-6 py-3">
+      <nav className="sticky top-0 z-50 px-0">
+          <div className="mx-auto flex w-full items-center justify-between px-6 py-2 bg-[#6F532D]/20 backdrop-blur-sm">
           <Link
             href="/"
-            className="flex text-2xl font-bold font-serif text-[#8B6B3E]"
+            className="flex text-3xl font-bold font-serif text-[#8B6B3E]"
           >
-            <Image src="/vercel.svg" className="invert mr-3" alt="logo" width={25} height={25} />
+            <Image
+              src="/logo.png"
+              className="mr-3"
+              alt="logo"
+              width={35}
+              height={35} 
+            />
             Skyline Realty
           </Link>
-
+<div className="w-auto px-8 py-1.5 rounded-full bg-[#6F532D]/50 backdrop-blur-xl border ">
           <div className="hidden items-center gap-8 md:flex font-normal uppercase ">
             {tabs.map((item, index) => (
               <Link
                 key={index}
                 href="#"
-                className="tracking-wide hover:text-[#8B6B3E]  transition-colors duration-300"
+                className="tracking-wide text-white hover:text-[#8B6B3E]  transition-colors duration-300"
               >
                 {item}
               </Link>
             ))}
-          </div>
-          <Button className="hidden rounded-lg bg-[#6F532D] px-5 font-medium text-white transition-colors duration-300 hover:bg-[#c2ae9b] md:block ">
+          </div></div>
+          <Button className="hidden rounded-lg bg-[#6F532D] px-5 py-4.5 md:inline-flex items-center justify-center  font-medium text-white transition-colors duration-300 hover:bg-[#c2ae9b]  ">
             Book Consultation
           </Button>
         </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";import { Separator } from "@/components/ui/separator"
 const Hero = () => {
   const keys = [
     { title: "500+", desc: "Properties Sold" },
@@ -8,20 +8,20 @@ const Hero = () => {
     { title: "123+", desc: "Expert Agents" },
   ];
   return (
-    <>
-      <div className="flex flex-col h-[calc(100vh-65px)] justify-center my-5">
-        <div className="items-start mx-30 my-15 ">
-          <div>
-            <h1 className="font-bold text-6xl my-10 text-white mix-blend-difference">
-              Find Your Dream Home
+    <><div className="flex h-full flex-col justify-center">
+        <div className="items-center mx-30 my-15">
+          <div className="text-white">
+            <p>⭐ Trusted by 1500+ families. </p>
+            <h1 className="font-bold text-6xl my-2 mb-10 text-white ">
+              Find Your Dream Property
             </h1>
-            <p className="text-2xl mb-3 text-white mix-blend-difference">
+            <p className="text-2xl mb-7 text-white mix-blend-difference">
               Discover premium residential and commercial
               <br />
               properties with trusted experts.
             </p>
             <Button
-              className="py-5 px-5 mr-3  bg-white/100 backdrop-blur-xl"
+              className="py-5 px-5 mr-3 bg-[#6F532D] text-white"
               variant="secondary"
             >
               Explore Properties
@@ -34,11 +34,12 @@ const Hero = () => {
             </Button>
           </div>
         </div>
-        <div className="flex flex-row justify-center gap-10 w-100vw py-3">
-          {keys.map((item, index) => (
+        <div className="flex flex-row justify-center gap-10 w-100vw py-3 bg-[#c2ae9b]/20">
+          {keys.map((item, index) => (<React.Fragment  key={index}>
             <div
-              key={index}
-              className="bg-white/20 backdrop-blur-md py-8 p-6 rounded-xl shadow-sm border border-gray-100 text-center transition-all duration-300 hover:shadow-md"
+              className=" py-8 p-6 rounded-xl  text-center transition-all duration-300 hover:shadow-xl"
+             
+              // className="bg-white/20 backdrop-blur-xl py-8 p-6 rounded-xl shadow-xl border  text-center transition-all duration-300 hover:shadow-md"
             >
               <h2 className="text-4xl font-extrabold text-white mb-1">
                 {item.title}
@@ -47,6 +48,11 @@ const Hero = () => {
                 {item.desc}
               </p>
             </div>
+            {index < keys.length-1 && (
+              <Separator
+                orientation="vertical"
+                className=" md:block h-full w-[1px] bg-white/100"
+              />) }</React.Fragment>
           ))}
         </div>
       </div>

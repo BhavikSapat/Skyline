@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Montserrat, Playfair_Display } from "next/font/google";
+import { Icon, icons } from "lucide-react";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -26,6 +27,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Skyline Realty",
   description: "Find your dream property with Skyline Realty.",
+  icons: {icon:"/logo.png"}
 };
 
 export default function RootLayout({
