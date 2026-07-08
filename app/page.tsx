@@ -8,6 +8,7 @@ import Property from "./components/Property";
 import Timeline from "./components/Timeline";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 const Page = () => {
   return (
@@ -28,7 +29,7 @@ const Page = () => {
         <Hero />
       </section>
 
-      <section className="relative min-h-screen overflow-hidden">
+      <section className="relative min-h-auto overflow-hidden">
         {/* <Image
           src="/whyUs.webp"
           alt="Why Us Background"
@@ -41,7 +42,7 @@ const Page = () => {
         <WhyUs />
       </section>
 
-      <section className="relative min-h-screen overflow-hidden">
+      <section className="relative min-h-auto overflow-hidden">
         {/* <Image
           src="/banner2.webp"
           alt="Properties Background"
@@ -56,7 +57,7 @@ const Page = () => {
         </div>
       </section>
 
-      <section className="relative min-h-screen overflow-hidden">
+      <section className="relative min-h-auto overflow-hidden">
         {/* <Image
           src="/properties-bg.jpg"
           alt="Properties Background"
@@ -68,7 +69,7 @@ const Page = () => {
 
         <Timeline />
       </section>
-      <section className="relative min-h-screen overflow-hidden">
+      <section className="relative min-h-auto overflow-hidden">
         {/* <Image
           src="/properties-bg.jpg"
           alt="Properties Background"
@@ -80,7 +81,7 @@ const Page = () => {
 
         <Testimonials />
       </section>
-      <section className="relative min-h-screen overflow-hidden">
+      <section className="relative min-h-auto overflow-hidden">
         {/* <Image
           src="/properties-bg.jpg"
           alt="Properties Background"
@@ -91,6 +92,18 @@ const Page = () => {
         {/* <div className="absolute inset-0 bg-black/40 -z-10" /> */}
 
         <Contact />
+      </section>
+      <section className="relative min-h-auto  overflow-hidden">
+        {/* <Image
+          src="/properties-bg.jpg"
+          alt="Properties Background"
+          fill
+          className="object-cover -z-10"
+        /> */}
+
+        {/* <div className="absolute inset-0 bg-black/40 -z-10" /> */}
+
+        <Footer />
       </section>
     </>
   );

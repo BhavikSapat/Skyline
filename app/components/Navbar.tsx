@@ -38,9 +38,11 @@ export default function Navbar() {
               ))}
             </div>
           </div>
-          <Button className="hidden rounded-lg bg-[#6F532D] px-5 py-4.5 md:inline-flex items-center justify-center  font-medium text-white transition-colors duration-300 hover:bg-[#c2ae9b]  ">
-            Book Consultation
-          </Button>
+          <Link href="#contact">
+            <Button className="hidden rounded-lg bg-[#6F532D] px-5 py-4.5 md:inline-flex items-center justify-center  font-medium text-white transition-all duration-300 hover:bg-[#6F532D] hover:scale-110 ">
+              Book Consultation
+            </Button>
+          </Link>
         </div>
       </nav>
     </>
