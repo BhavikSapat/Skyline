@@ -22,8 +22,9 @@ const Footer = () => {
         />
         */}
 
-        <div className="grid grid-cols-1 gap-12 text-left md:grid-cols-2 md:text-left lg:grid-cols-3">
-          <div>
+        {/* <div className="grid grid-cols-1 gap-12 text-left md:grid-cols-2 md:text-left lg:grid-cols-3"> */}
+        <div className="flex flex-col gap-12 text-center md:text-left md:flex-row md:items-start md:justify-between">
+          <div className="md:max-w-md">
             <Link
               href="/"
               className="flex items-center justify-center md:justify-start text-2xl sm:text-3xl font-bold font-serif text-[#C8A46B]"
@@ -77,13 +78,13 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <div className="md:hidden flex gap-4">
-            <div className="mx-auto">
+          <div className="flex gap-4 md:gap-30 text-left">
+            <div className="mx-auto md:w-fit">
               <h3 className="mb-5 text-lg font-semibold text-[#C8A46B]">
                 Quick Links
               </h3>
 
-              <ul className="space-y-3">
+              <ul className="space-y-3 ">
                 <li>
                   <Link href="#hero" className="transition hover:text-white">
                     Home
