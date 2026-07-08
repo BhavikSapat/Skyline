@@ -52,7 +52,7 @@ export default function Navbar() {
 
         <div className="md:hidden">
           <Sheet>
-            <SheetTrigger asChild>
+            <SheetTrigger>
               <Button
                 variant="ghost"
                 size="icon"
