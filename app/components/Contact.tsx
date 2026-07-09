@@ -144,7 +144,7 @@ ${data.query}`;
             lifestyle and investment goals. Fill out the form and one of our
             experts will get in touch with you shortly.
           </p>
-          <div className="flex justify-center">
+          <div className="flex justify-left">
             <div className="mt-8 space-y-4">
               <div className="flex items-center gap-3 ">
                 <span className="text-green-500 font-bold text-xl">✓</span>
