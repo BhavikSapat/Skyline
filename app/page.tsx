@@ -1,112 +1,22 @@
 import React from "react";
-import Image from "next/image";
+import RealEstateTemplate from "./Realty-Modified";
+const page = async () => {
+  const Responce = await fetch(
+    "https://store-admin-uat.actifyzone.com/store-uat/api/dynamic-template",
+    {
+      method: "GET",
+      headers: {
+        "X-Tenant-ID": "20",
+      },
+    },
+  );
+  const Data = await Responce.json();
 
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import WhyUs from "./components/WhyUs";
-import Property from "./components/Property";
-import Timeline from "./components/Timeline";
-import Testimonials from "./components/Testimonials";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-
-const Page = () => {
   return (
-    <>
-      <Navbar />
-
-      <section className="relative h-screen overflow-hidden">
-        <Image
-          src="/hero.png"
-          alt="Hero Background"
-          fill
-          priority
-          className="object-cover -z-10"
-        />
-
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent -z-10" />
-
-        <Hero />
-      </section>
-
-      <section className="relative min-h-auto overflow-hidden">
-        {/* <Image
-          src="/whyUs.webp"
-          alt="Why Us Background"
-          fill
-          className="object-cover -z-10"
-        /> */}
-
-        <div className="absolute inset-0 bg-white/80 -z-10" />
-
-        <WhyUs />
-      </section>
-
-      <section className="relative min-h-auto overflow-hidden">
-        {/* <Image
-          src="/banner2.webp"
-          alt="Properties Background"
-          fill
-          className="object-cover -z-10"
-        /> */}
-
-        <div className="absolute inset-0 bg-black/40 -z-10" />
-
-        <div className="z-20">
-          <Property />
-        </div>
-      </section>
-
-      <section className="relative min-h-auto overflow-hidden">
-        {/* <Image
-          src="/properties-bg.jpg"
-          alt="Properties Background"
-          fill
-          className="object-cover -z-10"
-        /> */}
-
-        <div className="absolute inset-0 bg-black/40 -z-10" />
-
-        <Timeline />
-      </section>
-      <section className="relative min-h-auto overflow-hidden">
-        {/* <Image
-          src="/properties-bg.jpg"
-          alt="Properties Background"
-          fill
-          className="object-cover -z-10"
-        /> */}
-
-        {/* <div className="absolute inset-0 bg-black/40 -z-10" /> */}
-
-        <Testimonials />
-      </section>
-      <section className="relative min-h-auto overflow-hidden">
-        {/* <Image
-          src="/properties-bg.jpg"
-          alt="Properties Background"
-          fill
-          className="object-cover -z-10"
-        /> */}
-
-        {/* <div className="absolute inset-0 bg-black/40 -z-10" /> */}
-
-        <Contact />
-      </section>
-      <section className="relative min-h-auto  overflow-hidden">
-        {/* <Image
-          src="/properties-bg.jpg"
-          alt="Properties Background"
-          fill
-          className="object-cover -z-10"
-        /> */}
-
-        {/* <div className="absolute inset-0 bg-black/40 -z-10" /> */}
-
-        <Footer />
-      </section>
-    </>
+    <div>
+      <RealEstateTemplate data={Data.formJson[0]} />
+    </div>
   );
 };
 
-export default Page;
+export default page;
